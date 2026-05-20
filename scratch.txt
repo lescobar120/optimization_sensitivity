@@ -1,0 +1,29 @@
+successful_optimizations_frame = tracker.get_successful_optimizations().copy()
+
+successful_ids = list(successful_optimizations_frame['optimization_id'])
+all_trades_frame = analyzer.compare_optimizations(successful_ids, 'trades')
+
+portfolio = 'EQUITY8_US'
+
+trade_stats_frame = analyzer.get_security_trade_stats(all_trades_frame, successful_optimizations_frame, portfolio)
+
+trade_analytics_html = ipw.HTML("<h2>Optimization Trade Analytics</2>")
+
+security_action_frequency_accordion = ipw.Accordion(children=[plot_manager.build_security_action_frequency_fig(trade_stats_frame, portfolio)])
+security_action_frequency_accordion.set_title(0, "Security Action Frequency")
+security_action_frequency_accordion.selected_index = None
+
+security_trade_consistency_accordion = ipw.Accordion(children=[build_security_trade_consistency_fig(trade_stats_frame, portfolio)])
+security_trade_consistency_accordion.set_title(0, "Security Trade Consistency")
+security_trade_consistency_accordion.selected_index = None
+
+security_action_distribution_accordion = ipw.Accordion(children=[plot_manager.build_security_actions_treemap(trade_stats_frame, portfolio)])
+security_action_distribution_accordion.set_title(0, "Security Action Distribution")
+security_action_distribution_accordion.selected_index = None
+
+ipw.VBox([
+    trade_analytics_html,
+    security_action_frequency_accordion,
+    security_trade_consistency_accordion,
+    security_action_distribution_accordion
+])
