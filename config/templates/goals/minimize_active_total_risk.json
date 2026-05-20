@@ -1,0 +1,7 @@
+{
+    "fieldCode": "active_total_risk",
+    "fieldType": "GOAL_CODE",
+    "description": "Active Total Risk|Ex-ante (predicted) portfolio tracking error (standard deviation of portfolio active return based on Bloomberg multi-factor risk model), expressed in %.",
+    "action": "MINIMIZE",
+    "tradeoff": 1
+}

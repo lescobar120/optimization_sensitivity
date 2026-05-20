@@ -1,0 +1,7 @@
+{
+  "client_id": "62d9f748372e4ed7b100d1d4a0195c71",
+  "client_secret": "264020ad5ebce82ef9bfe0cd86c302ee384a741f09b56adc5804181047ba0f5a",
+  "uuid": 26656679,
+  "base_url": "https://api.bloomberg.com",
+  "scopes":["enterprise-workflow","enterprise-portfolio-report","enterprise-portfolio-optimizations"]
+}

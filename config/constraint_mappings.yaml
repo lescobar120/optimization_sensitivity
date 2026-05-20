@@ -1,0 +1,26 @@
+# constraint_mappings.yaml
+constraints:
+  maximum_positions:
+    template_path: "constraints/portfolioConstraints/maximum_positions.json"
+    category: "portfolioConstraints"
+    param_key: "maximum_positions"
+    
+  turnover:
+    template_path: "constraints/portfolioConstraints/turnover.json"
+    category: "portfolioConstraints"
+    param_key: "turnover"
+    
+  active_total_risk:
+    template_path: "constraints/portfolioConstraints/active_total_risk.json"
+    category: "portfolioConstraints"
+    param_key: "active_total_risk"
+    
+  benchmark_sector_deviation:
+    template_path: "constraints/portfolioConstraints/benchmark_sector_deviation.json"
+    category: "portfolioConstraints"
+    param_key: "benchmark_sector_deviation"
+    
+  max_security_weight:
+    template_path: "constraints/instrumentConstraints/max_security_weight.json"
+    category: "instrumentConstraints"
+    param_key: "max_security_weight"

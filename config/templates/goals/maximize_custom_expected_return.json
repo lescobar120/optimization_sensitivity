@@ -1,0 +1,7 @@
+{
+    "fieldCode": "CUSTOM_NUMBER(FIELD = 'CF_7459422178055815169')",
+    "fieldType": "CUSTOM_FORMULA_ID",
+    "description": "In-House Target Price Driven Expected Return - UD_EQ_EVAL_TARGET_PRICE",
+    "action": "MAXIMIZE",
+    "tradeoff": 1
+}

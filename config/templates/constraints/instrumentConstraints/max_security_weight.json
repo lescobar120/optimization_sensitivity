@@ -1,0 +1,21 @@
+{
+    "fields": [
+        {
+            "valueOrField": {
+                "value": 0.0
+            },
+            "fieldCode": "MIN_WEIGHT"
+        },
+        {
+            "valueOrField": {
+                "value": "${max_security_weight}"
+            },
+            "fieldCode": "MAX_WEIGHT"
+        }
+    ],
+    "scope": {
+        "portfolioLevel": "INSTRUMENT_UNIVERSE"
+    },
+    "relativeTo": "NONE",
+    "units": "PERCENT"
+}

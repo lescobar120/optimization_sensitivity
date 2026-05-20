@@ -1,0 +1,9 @@
+# goal_mappings.yaml
+goals:
+  minimize_active_total_risk:
+    template_path: "goals/minimize_active_total_risk.json"
+    param_key: "minimize_active_total_risk"
+  
+  maximize_custom_expected_return:
+    template_path: "goals/maximize_custom_expected_return.json"
+    param_key: "maximize_custom_expected_return"

@@ -1,0 +1,17 @@
+{
+    "fieldCode": "weight",
+    "fieldType": "CONSTRAINT_CODE",
+    "description": "Weight|The market value of the instrument or grouping divided by the total market value of the portfolio, expressed as a percentage.",
+    "aggregation": "GROSS_VALUE",
+    "relativeTo": "BENCHMARK",
+    "relativeToBenchmark": {
+        "operation": "ADDITION"
+    },
+    "classificationNode": {
+        "classificationName": "GICS Sector",
+        "levels": ["All"]
+    },
+    "minThreshold": "-${benchmark_sector_deviation}",
+    "maxThreshold": "${benchmark_sector_deviation}",
+    "tradeoff": 1
+}

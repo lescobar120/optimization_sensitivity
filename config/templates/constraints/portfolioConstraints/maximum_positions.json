@@ -1,0 +1,8 @@
+{
+    "fieldCode": "maximum_positions",
+    "fieldType": "CONSTRAINT_CODE",
+    "description": "Number of Holdings|Number of holdings in the optimized portfolio",
+    "aggregation": "GROSS_VALUE",
+    "minThreshold": 25,
+    "maxThreshold": "${maximum_positions}"
+}

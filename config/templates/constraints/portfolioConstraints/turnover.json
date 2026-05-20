@@ -1,0 +1,8 @@
+{
+    "fieldCode": "turnover",
+    "fieldType": "CONSTRAINT_CODE",
+    "description": "Number of Holdings|Number of holdings in the optimized portfolio",
+    "aggregation": "GROSS_VALUE",
+    "maxThreshold": "${turnover}",
+    "tradeoff": 1
+}

@@ -1,0 +1,8 @@
+{
+"instrumentSource": {
+    "id": "${benchmarkId}",
+    "type": "INDEX_TICKER"
+},
+"tradingRule": "BUY_AND_SELL",
+"useAsSecondaryBenchmark": false
+}

@@ -1,0 +1,9 @@
+{
+    "instrumentSource": {
+        "id": "dummy",
+        "type": "CUSTOM_UNIVERSE"
+    },
+    "tradingRule": "BUY_AND_SELL",
+    "useAsSecondaryBenchmark": false,
+    "customUniverse": "${customUniverse}"
+}

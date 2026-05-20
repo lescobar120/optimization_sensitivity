@@ -1,0 +1,90 @@
+# optimization_parameters.yaml
+portfolios:
+  - EQUITY8_US
+  - EQUITY8_MID_CAP_GROWTH
+  #- EQUITY8_US_VALUE
+  #- EQUITY8_GLOBAL
+
+benchmarks:
+  - RAY
+  - RDG
+  - RLV
+  #- MXWO
+
+trade_universes:
+  #- portfolio_buy_and_sell
+  - benchmark_buy_and_sell
+  - active_ideas_buy_and_sell
+
+portfolio_benchmark_pairs:
+  - portfolio: EQUITY8_US
+    benchmark: RAY
+  - portfolio: EQUITY8_MID_CAP_GROWTH
+    benchmark: RDG
+  #- portfolio: EQUITY8_US_VALUE
+  #  benchmark: RLV
+  #- portfolio: EQUITY8_GLOBAL
+  #  benchmark: MXWO
+
+portfolio_benchmark_universe_mappings:
+  - portfolio: EQUITY8_US
+    benchmark: RAY
+    universes: 
+      - "benchmark_buy_and_sell"
+      - "active_ideas_buy_and_sell"
+  - portfolio: EQUITY8_MID_CAP_GROWTH
+    benchmark: RDG
+    universes:
+      - "benchmark_buy_and_sell"
+      - "active_ideas_buy_and_sell"
+
+risk_options:
+  - model: 
+    #- GLOBAL_EQUITY
+    - US_EQUITY
+  - scaling: 
+    - YEAR
+  - horizon: 
+    #- MONTHLY
+    - ANNUAL
+
+goals:
+  - minimize_active_total_risk
+  - maximize_custom_expected_return
+
+constraints:
+  # PORTFOLIO LEVEL
+  turnover:
+    min: 0.2
+    max: 0.5
+    step: 0.05
+  
+  maximum_positions:
+    values: [200, 250, 300]
+  
+  active_total_risk:
+    min: 0.02
+    max: 0.05
+    step: 0.01
+  
+  # BUCKET LEVEL
+  benchmark_sector_deviation:
+    min: 0.05
+    max: 0.15
+    step: 0.05
+
+  # SECURITY LEVEL
+  max_security_weight:
+    values: [0.03, 0.05]
+
+as_of_dates:
+  - "2025-04-15"
+
+saveTo:
+  NONE
+
+enableLookThrough:
+  false
+
+infusedCashAmount:
+  0

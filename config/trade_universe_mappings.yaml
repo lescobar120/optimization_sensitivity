@@ -1,0 +1,11 @@
+# trade_universe_mappings.yaml
+trade_universes:
+  portfolio_buy_and_sell:
+    template_path: "tradeUniverses/portfolio_buy_and_sell.json"
+    
+  benchmark_buy_and_sell:
+    template_path: "tradeUniverses/benchmark_buy_and_sell.json"
+    
+  active_ideas_buy_and_sell:
+    template_path: "tradeUniverses/custom_buy_and_sell.json"
+    instrument_list: "active_ideas.json"  # Reference to external list of instruments
